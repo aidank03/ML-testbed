@@ -25,4 +25,16 @@
 - Run a live model baseline, retrieval-only baseline and retrieval-plus-calculation baseline on genuinely held-out tasks.
 - Transfer the validated observables to an imploding-liner benchmark.
 
+## Multi-agent and governed-data track
+
+The architecture, ontology vocabulary and staged gates are defined in [Multi-agent systems and data ontology](MULTI_AGENT_AND_DATA_ONTOLOGY.md).
+
+1. Validate the ontology kernel and add typed Python models for sources, artifacts, claims, relationships, evaluations and context manifests.
+2. Compile replayable context from explicit versioned object references.
+3. Add a durable work-item ledger and a bounded creator-validator workflow with one controlled knowledge-commit path.
+4. Compare unstructured, tagged and provenance-aware retrieval using the same model, task set and token budget.
+5. Scale logical work only after correctness, contradiction handling, recovery, cost and authorization gates pass.
+
+Large-fleet operation is not an implemented capability or current performance claim.
+
 No calendar promise is made for facility work or solver access. A model or diagnostic should advance only when its defined evaluation gate is met.

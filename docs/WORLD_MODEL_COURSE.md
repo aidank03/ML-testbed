@@ -4,9 +4,9 @@
 
 Read and run one notebook at a time, starting at 05. A useful rhythm is 45–90 minutes per lesson: read the explanation, predict a result, run the cell, inspect a failure and attempt an exercise. Later lessons may warrant more time. The saved execution time is much shorter than the learning time.
 
-The first three lessons build the environment. Lessons 08–09 solve inverse problems and quantify uncertainty. Lessons 10–11 learn dynamics and observation representations. Lessons 12–13 introduce a real causal language model and its tool interface. Lesson 14 assembles a synthetic experiment loop.
+The first three lessons build the environment. Lessons 08–09 solve inverse problems and quantify uncertainty. Lessons 10–11 learn dynamics and observation representations. Lessons 12–13 introduce a real causal language model and its tool interface. Lesson 14 assembles a synthetic experiment loop. Lesson 15 turns the loop into bounded typed work, and lesson 16 builds the governed shared memory coordinated workers require.
 
-No earlier notebook must remain running. Shared definitions are imported from `ml_testbed/`, while the main model architectures and training loops are visible in the notebooks. Repeated LM training in 12–14 is intentional: each lesson works independently. None of these lessons loads or changes the previous Qwen adapter or the consumed PDV evaluations.
+No earlier notebook must remain running. Shared definitions are imported from `ml_testbed/`, while the main model architectures and training loops are visible in the notebooks. Repeated LM training in 12–14 is intentional: each lesson works independently. Lessons 15–16 are dependency-light architecture labs and also run independently. None of these lessons loads or changes the previous Qwen adapter or the consumed PDV evaluations.
 
 ## Existing Mac environment
 
@@ -67,6 +67,8 @@ python scripts/execute_notebooks.py --lessons 12
 | Inference | Parameter subsets, priors, likelihood, timing covariance, gain prior, neural density model | Joint uncertainty over more nuisance parameters and competing model families |
 | LM/runtime | Vocabulary, architecture, training budget, allowed calls, call budget, traces | Real tokenizers, pretrained/local providers, multi-turn tool learning, broader held-out tasks |
 | Design | Diagnostic candidates, noise assumptions, fictional cost, entropy objective | Feasibility constraints and decision-specific utility; real experts would define these |
+| Coordination | Typed work items, dependencies, concurrency, validation, idempotency | Durable leases, distributed recovery, identity, quotas and human approvals |
+| Knowledge | Ontology envelope, tags, relationships, provenance, context manifests | Persistent repository, migrations, temporal validity, access policy and measured retrieval quality |
 
 ## Sources and relationship to earlier work
 

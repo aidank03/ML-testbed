@@ -1,7 +1,7 @@
 include README.md CHANGELOG.md Makefile requirements-core.lock PyTorch.command Learn.command
 recursive-include src/factor/learn/static *.html *.css *.js
 recursive-include configs *.json
-recursive-include docs *.md *.pdf *.txt
+recursive-include docs *.md *.pdf *.txt *.json
 recursive-include templates *.md *.json
 recursive-include tests *.py
 

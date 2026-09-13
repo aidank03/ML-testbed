@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://factor.local/schemas/factor-core-ontology-0.1.json",
+  "title": "Factor Core Ontology Object",
+  "description": "Storage-neutral kernel for typed work, knowledge, and provenance records.",
+  "oneOf": [
+    { "$ref": "#/$defs/entity" },
+    { "$ref": "#/$defs/relationship" }
+  ],
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "maxLength": 200
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reference": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "$ref": "#/$defs/identifier" },
+        "version": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "envelope": {
+      "type": "object",
+      "required": [
+        "id",
+        "object_type",
+        "schema_version",
+        "ontology_version",
+        "project",
+        "security_classification",
+        "creator",
+        "created_at",
+        "version",
+        "verification_status",
+        "tags"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/identifier" },
+        "object_type": {
+          "enum": [
+            "Goal",
+            "Program",
+            "WorkItem",
+            "Agent",
+            "Human",
+            "Tool",
+            "Source",
+            "Artifact",
+            "Claim",
+            "Concept",
+            "Observation",
+            "Decision",
+            "Event",
+            "Policy",
+            "Evaluation",
+            "ContextManifest",
+            "Procedure"
+          ]
+        },
+        "schema_version": { "const": "factor-core-object/0.1" },
+        "ontology_version": { "const": "factor-ontology/0.1" },
+        "project": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "security_classification": {
+          "enum": ["public", "project", "restricted"]
+        },
+        "creator": { "$ref": "#/$defs/reference" },
+        "created_at": { "$ref": "#/$defs/timestamp" },
+        "observed_at": { "$ref": "#/$defs/timestamp" },
+        "valid_from": { "$ref": "#/$defs/timestamp" },
+        "valid_to": { "$ref": "#/$defs/timestamp" },
+        "version": { "type": "integer", "minimum": 1 },
+        "verification_status": {
+          "enum": ["unreviewed", "provisional", "accepted", "rejected", "superseded"]
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._/-]*$", "maxLength": 100 },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "supersedes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/reference" },
+          "uniqueItems": true,
+          "maxItems": 20
+        }
+      }
+    },
+    "entity": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object",
+          "required": ["payload"],
+          "properties": {
+            "payload": {
+              "type": "object",
+              "description": "Versioned type-specific content; domain modules narrow this shape."
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "relationship": {
+      "type": "object",
+      "required": [
+        "id",
+        "object_type",
+        "schema_version",
+        "ontology_version",
+        "project",
+        "security_classification",
+        "creator",
+        "created_at",
+        "version",
+        "verification_status",
+        "tags",
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/identifier" },
+        "object_type": { "const": "Relationship" },
+        "schema_version": { "const": "factor-core-relationship/0.1" },
+        "ontology_version": { "const": "factor-ontology/0.1" },
+        "project": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "security_classification": { "enum": ["public", "project", "restricted"] },
+        "creator": { "$ref": "#/$defs/reference" },
+        "created_at": { "$ref": "#/$defs/timestamp" },
+        "valid_from": { "$ref": "#/$defs/timestamp" },
+        "valid_to": { "$ref": "#/$defs/timestamp" },
+        "version": { "type": "integer", "minimum": 1 },
+        "verification_status": {
+          "enum": ["unreviewed", "provisional", "accepted", "rejected", "superseded"]
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._/-]*$", "maxLength": 100 },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "subject": { "$ref": "#/$defs/reference" },
+        "predicate": {
+          "enum": [
+            "decomposesInto",
+            "dependsOn",
+            "executes",
+            "uses",
+            "consumes",
+            "produces",
+            "derivedFrom",
+            "about",
+            "supportedBy",
+            "refutedBy",
+            "contradicts",
+            "basedOn",
+            "selects",
+            "governs",
+            "scores",
+            "changes",
+            "includes",
+            "appliesTo"
+          ]
+        },
+        "object": { "$ref": "#/$defs/reference" },
+        "provenance": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/reference" },
+          "uniqueItems": true,
+          "maxItems": 100
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

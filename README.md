@@ -14,6 +14,10 @@ Then use [`notebooks/03_physics_informed_motion_pinn.ipynb`](notebooks/03_physic
 
 The development draft [`notebooks/04_robust_pdv_tracking_draft.ipynb`](notebooks/04_robust_pdv_tracking_draft.ipynb) adds harder diagnostic regimes, a continuity-aware conventional baseline, a residual CNN, repeated seeds, uncertainty, ambiguity prediction, and a locked-test switch that remains off by default.
 
+After the world-model sequence in lessons 05–14, [`notebooks/15_multi_agent_coordination_lab.ipynb`](notebooks/15_multi_agent_coordination_lab.ipynb) turns one closed-loop experiment into a bounded typed work graph. [`notebooks/16_data_ontology_and_provenance_lab.ipynb`](notebooks/16_data_ontology_and_provenance_lab.ipynb) adds the governed shared memory: stable identities, tags, provenance, context manifests, and training-data lineage. Both are deterministic architecture labs and require no model account or distributed runtime.
+
+[Open the complete 01–16 course](START_WORLD_MODEL.md).
+
 The older browser lesson remains available by double-clicking `Learn.command`. [Learning Lab guide](docs/LEARNING_LAB.md) · [Learning Lab code](src/factor/learn/)
 
 The page runs on this computer at `127.0.0.1`; it does not call a cloud model. Every experiment saves an evidence folder under `runs/learning-lab/`. JAX is an explicitly optional next step and no JAX result is claimed until its parity lesson is installed and run.
@@ -88,6 +92,9 @@ See [the build report](reports/BUILD_REPORT.md), [the model comparison](reports/
 ## Design and operation
 
 - [Program design](docs/PROGRAM_DESIGN.md)
+- [Multi-agent systems and data ontology](docs/MULTI_AGENT_AND_DATA_ONTOLOGY.md)
+- [Full frameworks and ontologies reference](docs/MULTI_AGENT_FRAMEWORKS_AND_ONTOLOGIES.md)
+- [Machine-readable ontology kernel](docs/ontology/README.md)
 - [Local and Slurm jobs](docs/HPC.md)
 - [Frontier API configuration](docs/FRONTIER_APIS.md)
 - [Factory gates](docs/FACTORY.md)
@@ -101,6 +108,6 @@ Next external inputs: a permitted API project and total spending cap, a schedule
 
 ## ML-testbed world-model course
 
-Continue the PyTorch notebooks with ten new lessons, **05–14**, building a synthetic experiment environment and the language-model tools around it. The progression covers machine dynamics, diagnostic response, joint inference, uncertainty, learned world models, attention, a tiny causal LM and a complete synthetic inference loop.
+Continue the PyTorch notebooks through lessons **05–16**. Lessons 05–14 build a synthetic experiment environment and the language-model tools around it. Lessons 15–16 extend that closed loop into bounded multi-agent coordination and ontology/provenance-aware data systems.
 
-[Start the course](START_WORLD_MODEL.md) · [Open notebook 05](notebooks/05_experiment_contract_and_config.ipynb) · [Course guide](docs/WORLD_MODEL_COURSE.md)
+[Start the course](START_WORLD_MODEL.md) · [Open notebook 05](notebooks/05_experiment_contract_and_config.ipynb) · [Open notebook 15](notebooks/15_multi_agent_coordination_lab.ipynb) · [Course guide](docs/WORLD_MODEL_COURSE.md)

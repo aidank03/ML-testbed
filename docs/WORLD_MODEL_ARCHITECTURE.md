@@ -33,6 +33,7 @@ The raw response path is implemented in lesson 07. For speed and clarity, lesson
 - `ml_testbed/language.py`: vocabulary, semantic data partitions, causal Transformer, generation and constrained call scoring.
 - `ml_testbed/runtime.py`: observation-only bounded dispatcher, provenance hashes and conditional inference.
 - `notebooks/05–14`: curriculum, visible model/training code, plots, comparisons and exercises.
+- `notebooks/15–16`: bounded multi-agent coordination and governed-data/ontology labs.
 - `tests/test_world_model.py`: physics-limit, reproducibility, identifiability, causal-mask and tool-boundary checks.
 
 ## Interfaces worth preserving
@@ -64,3 +65,9 @@ The simulator includes a consistent mean-motion/circuit coupling and an energy-b
 | Introduce real measurements | Immutable raw/calibration records and independent reference questions | Explicit domain-gap assessment before any physics claim |
 
 The capstone selects synthetic diagnostics under an authored information objective. It does not select real Z settings or operate equipment.
+
+## Extension after the closed loop
+
+Lesson 14 produces one reproducible experiment record. Lesson 15 decomposes such work into typed tasks, admits only dependency-ready work under a concurrency limit, validates proposals and commits canonical state through one controlled path. Lesson 16 supplies the complementary knowledge layer: stable identities, tags, verification state, provenance relationships, immutable context manifests and training-data lineage.
+
+These lessons are executable architecture models, not a distributed service. Their implementation boundary is defined in [Multi-agent systems and data ontology](MULTI_AGENT_AND_DATA_ONTOLOGY.md).

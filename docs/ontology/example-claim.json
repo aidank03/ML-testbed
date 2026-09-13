@@ -1,0 +1,35 @@
+{
+  "id": "claim:optical-drift-can-mimic-motion",
+  "object_type": "Claim",
+  "schema_version": "factor-core-object/0.1",
+  "ontology_version": "factor-ontology/0.1",
+  "project": "factor",
+  "security_classification": "project",
+  "creator": {
+    "id": "agent:conventional-runtime",
+    "version": 1
+  },
+  "created_at": "2026-09-13T00:00:00Z",
+  "version": 1,
+  "verification_status": "provisional",
+  "confidence": 0.95,
+  "tags": [
+    "domain/pdv",
+    "evidence/synthetic",
+    "risk/confounding",
+    "status/development-only"
+  ],
+  "payload": {
+    "statement": "Within the current synthetic measurement model, optical-path drift can reproduce apparent motion.",
+    "scope": "Synthetic development benchmark only; this does not identify a mechanism in real data.",
+    "evidence": [
+      {
+        "id": "artifact:reference-run-metrics",
+        "version": 1
+      }
+    ],
+    "uncertainties": [
+      "No independently validated bound on optical-path drift is supplied for a real observation."
+    ]
+  }
+}
