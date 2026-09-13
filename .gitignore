@@ -33,3 +33,7 @@ docs/PROJECT_SECTION.md
 docs/SCIENCE_BOUNDARIES.md
 docs/MODEL_CARD.md
 docs/LEGACY_V02_README.md
+
+# Local operating-system and editor files.
+.DS_Store
+.vscode/

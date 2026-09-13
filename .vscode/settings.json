@@ -1,5 +1,0 @@
-{
-  "python.defaultInterpreterPath": "/Users/operator/miniforge3/envs/factor-ai/bin/python",
-  "jupyter.askForKernelRestart": false,
-  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"]
-}

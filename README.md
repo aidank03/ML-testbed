@@ -1,8 +1,8 @@
-# Factor
+# ML-testbed
 
-**A callable scientific environment with measured outcomes.** Factor connects a question to a bounded agent, numerical tools, a simulation job, synthetic diagnostics, conditional inference and a recorded next decision. It starts with one researcher; shared-team hosting comes later.
+**A machine-learning testbed for complete scientific inference across complex experiments.** The repository combines synthetic physics, diagnostic models, uncertainty-aware inference, learned world models and scientific agents. Factor is its application layer: it connects a question to bounded tools, simulation jobs, diagnostic evidence, conditional inference and a recorded next decision.
 
-Version 0.3 is an executed development system, not a validated physics product. It extends the recovered `liner-stability` 0.2 repository and preserves its numerical workflow and CLI. The distribution remains `liner-stability`; new code imports `factor` and installs the `factor` command. No external repository or service has been published.
+The current Factor application is version 0.3. It is an executed development system, not a validated physics product. It extends the recovered `liner-stability` 0.2 repository and preserves its numerical workflow and CLI. The distribution remains `liner-stability`; application code imports `factor` and installs the `factor` command.
 
 ## Start with the visual Learning Lab
 
@@ -99,7 +99,7 @@ The automatic captions for [the requested interview](https://www.youtube.com/wat
 Next external inputs: a permitted API project and total spending cap, a scheduler/account with resource ceilings, and eventually one complete diagnostic/calibration record. Factor never operates laboratory equipment or changes facility settings.
 
 
-## LM-testbed world-model course
+## ML-testbed world-model course
 
 Continue the PyTorch notebooks with ten new lessons, **05–14**, building a synthetic experiment environment and the language-model tools around it. The progression covers machine dynamics, diagnostic response, joint inference, uncertainty, learned world models, attention, a tiny causal LM and a complete synthetic inference loop.
 

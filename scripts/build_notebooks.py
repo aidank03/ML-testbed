@@ -15,12 +15,12 @@ import torch
 from torch import nn
 from dataclasses import asdict, replace
 from IPython.display import display
-ROOT = next((p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'lm_testbed').is_dir()), None)
+ROOT = next((p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'ml_testbed').is_dir()), None)
 if ROOT is None:
-    raise RuntimeError('Open this notebook from the LM-testbed repo, with lm_testbed/ beside notebooks/.')
+    raise RuntimeError('Open this notebook from the ML-testbed repo, with ml_testbed/ beside notebooks/.')
 sys.path.insert(0, str(ROOT))
-from lm_testbed.world import *
-from lm_testbed.learning import seed_all, fit, save_run, grid_posterior, weighted_interval, entropy
+from ml_testbed.world import *
+from ml_testbed.learning import seed_all, fit, save_run, grid_posterior, weighted_interval, entropy
 seed_all(42)
 plt.rcParams.update({'figure.figsize': (10, 4), 'axes.grid': True, 'grid.alpha': .2})
 DEVICE = torch.device('cpu')
@@ -28,9 +28,9 @@ print('PyTorch', torch.__version__, '| CPU | dimensionless teaching world v1')
 '''
 
 def write(num,slug,title,intro,skills,cells,exercises):
-    first=[md(f'# LM-testbed {num} — {title}\n\n{intro}'),
+    first=[md(f'# ML-testbed {num} — {title}\n\n{intro}'),
       md(f'''## How to use this lesson
-Run from the top with **Python (Factor AI)** or the environment in `docs/WORLD_MODEL_COURSE.md`. Each notebook runs independently; later notebooks reuse the small `lm_testbed` package. No API calls or model downloads occur. Training uses the CPU to make the default run portable.
+Run from the top with **Python (Factor AI)** or the environment in `docs/WORLD_MODEL_COURSE.md`. Each notebook runs independently; later notebooks reuse the small `ml_testbed` package. No API calls or model downloads occur. Training uses the CPU to make the default run portable.
 
 **Skills:** {skills}
 
@@ -38,12 +38,12 @@ Run from the top with **Python (Factor AI)** or the environment in `docs/WORLD_M
 
 **Scope:** a dimensionless, pre-stagnation Z-inspired teaching model. It is not a calibrated digital twin of Sandia's Z machine. The thermal and perturbation variables are proxies; they do not identify phase, ETI, MRTI, or fusion performance.'''),code(SETUP)]
     final=md('## Your next experiments\n\nWrite a prediction, change one thing, and save both successes and failures.\n\n'+'\n'.join(f'{i+1}. {x}' for i,x in enumerate(exercises)))
-    n=nb.v4.new_notebook(cells=first+cells+[final],metadata={'kernelspec':{'display_name':'Python (Factor AI)','language':'python','name':'factor-ai'},'language_info':{'name':'python','version':'3.12'},'lm_testbed':{'course_version':'0.1.0','lesson':num,'evaluation':'public development'}})
+    n=nb.v4.new_notebook(cells=first+cells+[final],metadata={'kernelspec':{'display_name':'Python (Factor AI)','language':'python','name':'factor-ai'},'language_info':{'name':'python','version':'3.12'},'ml_testbed':{'course_version':'0.1.0','lesson':num,'evaluation':'public development'}})
     enhance(n,num)
     nb.validate(n); nb.write(n,ROOT/'notebooks'/f'{num}_{slug}.ipynb')
 
 write('05','experiment_contract_and_config','from one diagnostic to an experiment world',
-'''Factor becomes the application layer: it asks questions, calls tools and records evidence. LM-testbed is the workshop where we learn to build the models and interfaces behind those tools. This lesson turns “the experiment” into an explicit software contract.
+'''Factor becomes the application layer: it asks questions, calls tools and records evidence. ML-testbed is the workshop where we learn to build the models and interfaces behind those tools. This lesson turns “the experiment” into an explicit software contract.
 
 Think of a model train set: the tracks are the simulator, the cameras are diagnostics, and the language model is a dispatcher. The dispatcher needs a map and a timetable before it can make useful decisions.''',
 'dataclasses, validation, tensor dimensions, provenance, reproducible configuration, interface design',[
@@ -539,7 +539,7 @@ md(r'''## 1. The language and its supervision
 A prompt encodes a question, available current/motion channels, and timing calibration. A completion is JSON containing one tool name. Twenty-four semantic cases are partitioned into 16 training, four tuning, and four evaluation cases. These small counts are for learning the machinery, not establishing general language understanding.
 
 The labels are an authored workflow policy: obtain missing information, request a timing calibration when required, then infer. A growth question needs imaging because the summary operator cannot observe growth.'''),
-code('''from lm_testbed.language import TinyToolLM, VOCAB, TOKEN, partitions, batch, lm_loss, prompt, answer, expected_tool, generate, parse_call, constrained_call
+code('''from ml_testbed.language import TinyToolLM, VOCAB, TOKEN, partitions, batch, lm_loss, prompt, answer, expected_tool, generate, parse_call, constrained_call
 train,dev,evaluation=partitions()
 print('Vocabulary:',VOCAB)
 print('Prompt:',prompt(train[0])); print('Answer:',answer(expected_tool(train[0])))
@@ -610,8 +610,8 @@ md(r'''## 1. The candidate receives only permitted observations
 This notebook uses the tiny LM from lesson 12, retrained locally with the same fixed recipe so it runs independently. Each record contains the request and reconstructed summaries. Missing values are actually removed from the available information by replacing their slots with NaN. The thermal family is not exposed in this agent task. Evaluator truth stays separate.
 
 This lesson runs a bounded single-decision episode. Asking for a missing diagnostic ends the episode as `needs_measurement`; the system never invents the requested measurement.'''),
-code('''from lm_testbed.language import train_lm, partitions, expected_tool, generate, constrained_call
-from lm_testbed.runtime import run_agent, dispatch
+code('''from ml_testbed.language import train_lm, partitions, expected_tool, generate, constrained_call
+from ml_testbed.runtime import run_agent, dispatch
 seed_all(12); lm,lm_history=train_lm()
 _,_,cases_eval=partitions()
 records=[]; truths=[]
@@ -675,7 +675,7 @@ LOCAL_MODEL_ID=''  # Fill in the exact identifier of an already-loaded local mod
 if USE_LOCAL_LM:
     if not LOCAL_MODEL_ID: raise ValueError('Set LOCAL_MODEL_ID to your loaded local model')
     import urllib.request
-    from lm_testbed.language import TOOLS
+    from ml_testbed.language import TOOLS
     def local_policy(case):
         payload={'model':LOCAL_MODEL_ID,'temperature':0,'max_tokens':80,'messages':[
             {'role':'system','content':'Return only JSON with one key tool. Allowed tools: '+', '.join(TOOLS)+'. Choose needed evidence before inference. Growth requires image. Mass requires current and motion. Charge requires current. Unknown clock requires align.'},
@@ -783,9 +783,9 @@ for name,idx in [('current',[0,1,2]),('augmented',[0,1,2]+indices)]:
 display(study)'''),
 md(r'''## 7. Hand a complete summary record to the LM runtime
 The LM does not receive simulator parameters or trajectories. It chooses a tool from metadata; the numerical tool calculates an estimate and records its assumptions. To satisfy the runtime's current “motion available” contract, acquire both speed and radius summaries here. This is a **separate final request with more information** than the design comparison above.'''),
-code('''from lm_testbed.language import train_lm, constrained_call
-from lm_testbed.runtime import run_agent
-from lm_testbed.language import expected_tool
+code('''from ml_testbed.language import train_lm, constrained_call
+from ml_testbed.runtime import run_agent
+from ml_testbed.language import expected_tool
 final_observed=observed.clone()
 for family in ([3,4,5],[6,7,8]):
     missing=[i for i in family if not torch.isfinite(final_observed[i])]
@@ -798,7 +798,7 @@ rule_result=run_agent(lambda case:{'tool':expected_tool(case)},public_record,max
 print('LM episode:'); display(agent_result)
 print('Conventional episode:'); display(rule_result)'''),
 md(r'''## 8. Save the experiment as a reproducible application record
-The record contains assumed machine configuration, acquisition design, posterior summaries, checks, evaluation and agent trace. This is the contract Factor can consume through an adapter. Existing Factor APIs are left unchanged; `lm_testbed.runtime` is a standalone teaching interface.'''),
+The record contains assumed machine configuration, acquisition design, posterior summaries, checks, evaluation and agent trace. This is the contract Factor can consume through an adapter. Existing Factor APIs are left unchanged; `ml_testbed.runtime` is a standalone teaching interface.'''),
 code('''metrics={'selected_diagnostic':chosen,'design_scores':design,'actual_entropy_reduction':entropy(weights)-entropy(updated),
          'posterior_mean':mean_after.tolist(),'predictive_check_z':check_z.tolist(),'mismatch_check_z':wrong_z.tolist(),
          'study':study,'LM_result':agent_result,'rule_result':rule_result}

@@ -8,10 +8,10 @@ except ModuleNotFoundError:
     torch = None
 
 if torch is not None:
-    from lm_testbed.world import MachineConfig, DiagnosticConfig, simulate, summaries, observe, fingerprint
-    from lm_testbed.learning import grid_posterior
-    from lm_testbed.language import TinyToolLM, batch, partitions, parse_call, TOKEN
-    from lm_testbed.runtime import dispatch, run_agent
+    from ml_testbed.world import MachineConfig, DiagnosticConfig, simulate, summaries, observe, fingerprint
+    from ml_testbed.learning import grid_posterior
+    from ml_testbed.language import TinyToolLM, batch, partitions, parse_call, TOKEN
+    from ml_testbed.runtime import dispatch, run_agent
 
 @unittest.skipUnless(torch is not None, "Optional PyTorch dependency not installed")
 class WorldContracts(unittest.TestCase):
@@ -82,6 +82,6 @@ class RunnerScope(unittest.TestCase):
             root=Path(directory); (root/'notebooks').mkdir()
             for number,tag in [('01','01'),('04','04'),('05','05'),('06',None)]:
                 notebook=nbformat.v4.new_notebook()
-                if tag: notebook.metadata['lm_testbed']={'lesson':tag}
+                if tag: notebook.metadata['ml_testbed']={'lesson':tag}
                 nbformat.write(notebook,root/'notebooks'/f'{number}_example.ipynb')
             self.assertEqual([p.name for p in course_notebooks(root)],['05_example.ipynb'])

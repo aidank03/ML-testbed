@@ -6,11 +6,11 @@ Read and run one notebook at a time, starting at 05. A useful rhythm is 45–90 
 
 The first three lessons build the environment. Lessons 08–09 solve inverse problems and quantify uncertainty. Lessons 10–11 learn dynamics and observation representations. Lessons 12–13 introduce a real causal language model and its tool interface. Lesson 14 assembles a synthetic experiment loop.
 
-No earlier notebook must remain running. Shared definitions are imported from `lm_testbed/`, while the main model architectures and training loops are visible in the notebooks. Repeated LM training in 12–14 is intentional: each lesson works independently. None of these lessons loads or changes the previous Qwen adapter or the consumed PDV evaluations.
+No earlier notebook must remain running. Shared definitions are imported from `ml_testbed/`, while the main model architectures and training loops are visible in the notebooks. Repeated LM training in 12–14 is intentional: each lesson works independently. None of these lessons loads or changes the previous Qwen adapter or the consumed PDV evaluations.
 
 ## Existing Mac environment
 
-The installed **Python (Factor AI)** Jupyter kernel contains the dependencies. Open `notebooks/05_experiment_contract_and_config.ipynb`, choose that kernel, then **Restart Kernel → Run All**. The repository root must contain both `notebooks/` and `lm_testbed/`.
+The installed **Python (Factor AI)** Jupyter kernel contains the dependencies. Open `notebooks/05_experiment_contract_and_config.ipynb`, choose that kernel, then **Restart Kernel → Run All**. The repository root must contain both `notebooks/` and `ml_testbed/`.
 
 Each run writes to a new `runs/world-model/<lesson>-<unique-id>/` directory. Reports contain configuration, Python/library versions, CPU device and source-cell/module hashes. Model lessons also save weights. Re-running does not overwrite an earlier run.
 
@@ -28,7 +28,7 @@ python -m jupyterlab
 
 If an existing `factor-ai` kernel points to a different environment, retain it and use a distinct kernel name, then select that kernel in the notebooks. The execution script defaults to `factor-ai` and accepts `--kernel` to select another registered kernel.
 
-`lm_testbed/` is a notebook-local Python package, found by the setup cell. It does not alter Factor's existing build configuration or distribution name. You do not need to install the Factor package to run this course.
+`ml_testbed/` is a notebook-local Python package, found by the setup cell. It does not alter Factor's existing build configuration or distribution name. You do not need to install the Factor package to run this course.
 
 The tested versions are recorded in `requirements-world-model.txt`. Installing dependencies on another machine requires network access; notebook execution itself does not. CPU is the tested default. Device transfer for CUDA/MPS is an exercise, not a verified capability of these lesson implementations.
 

@@ -1,6 +1,6 @@
 # World-model course: verification and measured results
 
-Verified on 2026-09-07 in the local LM-testbed checkout. **All ten notebooks executed successfully in fresh Jupyter kernels. All 13 focused tests passed.** The final stored executions total about 33.4 seconds on this machine; startup, model size and hardware affect runtime. Optional local-server inference was disabled and is not claimed as tested.
+Verified on 2026-09-07 in the local ML-testbed checkout. **All ten notebooks executed successfully in fresh Jupyter kernels. All 13 focused tests passed.** The final stored executions total about 33.4 seconds on this machine; startup, model size and hardware affect runtime. Optional local-server inference was disabled and is not claimed as tested.
 
 | Lesson | Code cells | Seconds | Execution |
 |---|---:|---:|---|

@@ -2,7 +2,7 @@
 
 ## Responsibilities
 
-**LM-testbed** owns the learning environments, models, data contracts and evaluation. **Factor** is the scientific application that can call those components, attach evidence and present a conditional decision. The user-facing application should not need to know whether a prediction came from RK4, a learned surrogate or a calibrated external solver; the tool result must declare its method and limitations.
+**ML-testbed** owns the learning environments, models, data contracts and evaluation. **Factor** is the scientific application that can call those components, attach evidence and present a conditional decision. The user-facing application should not need to know whether a prediction came from RK4, a learned surrogate or a calibrated external solver; the tool result must declare its method and limitations.
 
 ```text
 MachineConfig + uncertain parameters
@@ -28,10 +28,10 @@ The raw response path is implemented in lesson 07. For speed and clarity, lesson
 
 ## Files
 
-- `lm_testbed/world.py`: configuration validation, differentiable RK4 simulator, raw diagnostic operators and reconstructed-summary benchmark.
-- `lm_testbed/learning.py`: training helper, discrete posterior, weighted intervals and unique run records.
-- `lm_testbed/language.py`: vocabulary, semantic data partitions, causal Transformer, generation and constrained call scoring.
-- `lm_testbed/runtime.py`: observation-only bounded dispatcher, provenance hashes and conditional inference.
+- `ml_testbed/world.py`: configuration validation, differentiable RK4 simulator, raw diagnostic operators and reconstructed-summary benchmark.
+- `ml_testbed/learning.py`: training helper, discrete posterior, weighted intervals and unique run records.
+- `ml_testbed/language.py`: vocabulary, semantic data partitions, causal Transformer, generation and constrained call scoring.
+- `ml_testbed/runtime.py`: observation-only bounded dispatcher, provenance hashes and conditional inference.
 - `notebooks/05–14`: curriculum, visible model/training code, plots, comparisons and exercises.
 - `tests/test_world_model.py`: physics-limit, reproducibility, identifiability, causal-mask and tool-boundary checks.
 

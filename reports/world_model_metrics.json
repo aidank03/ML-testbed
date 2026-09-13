@@ -68,11 +68,11 @@
       ]
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/05_experiment_contract_and_config.ipynb": "1128fb657c1c42f54ab8d2bb988da3600001de49bf764519dcb5290770c2ef91"
     }
   },
@@ -103,11 +103,11 @@
       "energy_residual": 1.2365166583983012e-06
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/06_differentiable_machine_and_liner.ipynb": "f4c4f8c78c3768d34c4dabaff048dc6e067db71466a98422a61a0cbff88b2357"
     }
   },
@@ -171,11 +171,11 @@
       ]
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/07_synthetic_diagnostic_suite.ipynb": "84943fcb78f5b262d021229e84d1c7e61565ee28cd199a0a684ecdf3532811bc"
     }
   },
@@ -219,11 +219,11 @@
       "max_standardized_residual": 1.759066104888916
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/08_joint_inference_and_identifiability.ipynb": "4edf13383a1090b24805d0a617b06af1bc9f0a0ea72173642dbcc8b23b14a1a5"
     }
   },
@@ -289,11 +289,11 @@
       ]
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/09_amortized_probabilistic_inference.ipynb": "36836993f0326dc74e37c0239121d8ff5027cd2ebef4364ba822c1e9dde3718c"
     }
   },
@@ -319,11 +319,11 @@
       "invalid_radius_fraction": 0.0
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/10_learned_dynamics_world_model.ipynb": "59fa1b4138342118c3488e693c1735a1adde813a0b79f4d04cce338de42ac089"
     }
   },
@@ -418,11 +418,11 @@
       "masked_value_invariance": 0.0
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/11_multimodal_attention_and_missing_data.ipynb": "d9597de8c2916701e5312747b6ee4b6c98f411e1cced7490cb325edcfdb5996e"
     }
   },
@@ -449,11 +449,11 @@
       "evaluation_cases": 4
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/12_tiny_language_model_for_tool_calls.ipynb": "e6332f9adf18744ca7bd1958554985aedde228b916c160a0bf5c61e667451c82"
     }
   },
@@ -489,11 +489,11 @@
       }
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/13_language_model_tools_and_evaluation.ipynb": "e47b620a9bcddb2178244cac0316b5fb464fe004e2329cc3b9fb60385e2f459c"
     }
   },
@@ -737,11 +737,11 @@
       }
     },
     "source_sha256": {
-      "lm_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
-      "lm_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
-      "lm_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
-      "lm_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
-      "lm_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
+      "ml_testbed/world.py": "dd48de2bd43cd289505fe12f0477043ba171c7f8d8caba0d3aea700ce9ee6e90",
+      "ml_testbed/__init__.py": "80cda52a2a1e77cf47eeebbdf62cd707a5e2f74880787619f54700fceef6dc58",
+      "ml_testbed/runtime.py": "c160870633bc8164278480e1bd6eab6f137fed5e970bfad6282dfd7efc99152a",
+      "ml_testbed/language.py": "5f85a252795076546f2d2619806637e920d41578bde60af8ea81c0af3f60aae4",
+      "ml_testbed/learning.py": "0efb3e162f620171417d9c7fc54daf1a52b026638bd914e454eee596cdd2ef84",
       "notebooks/14_closed_loop_experiment_world.ipynb": "f518128104c8b02156750d8e2e226da1734fdf833948d96f0fdd153b1a377357"
     }
   }

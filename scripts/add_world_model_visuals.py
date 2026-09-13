@@ -334,7 +334,7 @@ add('12','## 5. Save','Watch autoregressive generation one token at a time',
 
 **Notice:** these are next-token probabilities inside a tiny command language. They are not calibrated probabilities that a scientific decision is correct.''',
 r'''
-from lm_testbed.language import encode
+from ml_testbed.language import encode
 from matplotlib.animation import FuncAnimation
 from IPython.display import HTML
 import textwrap as v_textwrap
@@ -489,7 +489,7 @@ def enhance(notebook,lesson):
         for anchor,new_cells in additions:
             if cell.cell_type=='markdown' and cell.source.startswith(anchor): result.extend(copy.deepcopy(new_cells))
         result.append(cell)
-    notebook.cells=result; notebook.metadata['lm_testbed']['visual_pack']=PACK
+    notebook.cells=result; notebook.metadata['ml_testbed']['visual_pack']=PACK
     return notebook
 
 if __name__=='__main__':
@@ -499,7 +499,7 @@ if __name__=='__main__':
         lesson=p.name[:2]
         if lesson not in ADDITIONS: continue
         n=nb.read(p,as_version=4)
-        if n.metadata.get('lm_testbed',{}).get('lesson')!=lesson: continue
+        if n.metadata.get('ml_testbed',{}).get('lesson')!=lesson: continue
         enhance(n,lesson); nb.validate(n)
         for c in n.cells:
             if c.cell_type=='code' and c.metadata.get('world_visual_pack')==PACK: compile(c.source,p.name,'exec')

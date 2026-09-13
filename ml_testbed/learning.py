@@ -55,7 +55,7 @@ def save_run(root, lesson, metrics, config=None):
     root=Path(root); run=root/'runs'/'world-model'/f'{lesson}-{uuid.uuid4().hex[:10]}'
     run.mkdir(parents=True,exist_ok=False)
     source={}
-    for pattern in ('lm_testbed/*.py',f'notebooks/{lesson}_*.ipynb'):
+    for pattern in ('ml_testbed/*.py',f'notebooks/{lesson}_*.ipynb'):
         for p in root.glob(pattern):
             # Notebook outputs change during execution; hash source cells only.
             if p.suffix=='.ipynb':

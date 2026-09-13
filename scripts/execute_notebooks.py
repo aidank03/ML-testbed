@@ -1,4 +1,4 @@
-"""Execute only LM-testbed course lessons 05–14 in fresh Jupyter kernels."""
+"""Execute only ML-testbed course lessons 05–14 in fresh Jupyter kernels."""
 from pathlib import Path
 import argparse,json,time,os
 import nbformat
@@ -10,7 +10,7 @@ def course_notebooks(root):
     for path in sorted((Path(root)/'notebooks').glob('*.ipynb')):
         if path.name[:2] not in {f'{i:02d}' for i in range(5,15)}: continue
         notebook=nbformat.read(path,as_version=4)
-        if notebook.metadata.get('lm_testbed',{}).get('lesson')==path.name[:2]: result.append(path)
+        if notebook.metadata.get('ml_testbed',{}).get('lesson')==path.name[:2]: result.append(path)
     return result
 
 def main():
@@ -21,7 +21,7 @@ def main():
     previous=json.loads(report_path.read_text()) if report_path.exists() and args.lessons else []
     results=[r for r in previous if r['notebook'][:2] in {f'{i:02d}' for i in range(5,15)} and r['notebook'][:2] not in (args.lessons or [])]
     selected=[p for p in course_notebooks(ROOT) if not args.lessons or p.name[:2] in args.lessons]
-    if not selected: raise SystemExit('No matching LM-testbed lessons 05–14')
+    if not selected: raise SystemExit('No matching ML-testbed lessons 05–14')
     for path in selected:
         start=time.monotonic(); notebook=nbformat.read(path,as_version=4)
         print('START',path.name,flush=True)

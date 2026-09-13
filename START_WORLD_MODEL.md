@@ -1,8 +1,8 @@
-# LM-testbed: the synthetic experiment course
+# ML-testbed: the synthetic experiment course
 
 **Start with [notebook 05](notebooks/05_experiment_contract_and_config.ipynb).** Open it in VS Code or Jupyter and select **Python (Factor AI)**. The saved notebooks include executed outputs and plots. Run from the top to make a new experiment.
 
-Factor is the scientific application layer. LM-testbed is the place to learn the machine learning, language models, software interfaces and evaluation that support it. These ten lessons continue the existing PyTorch/PDV notebooks 01–04.
+Factor is the scientific application layer. ML-testbed is the place to learn the machine learning, language models, software interfaces and evaluation that support it. These ten lessons continue the existing PyTorch/PDV notebooks 01–04.
 
 | Lesson | Build | Learn |
 |---|---|---|
